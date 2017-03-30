@@ -27,10 +27,7 @@ export function fetchQuote(quote) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                firstParam: 'someValue',
-                secondParam: 'someOtherValue',
-            })
+            body: JSON.stringify(quote)
         })
             .then(response => response.json())
             .then(json => dispatch(receiveQuote(quote, json)))
